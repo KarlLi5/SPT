@@ -17,6 +17,42 @@ Related links:
 ### Introduction
 Backprojectionnetworkshaveachievedpromising super-resolutionperformancefornature imagesbutnotwellbe explored intheremote sensing image super-resolution(RSISR) field due to the high computation costs. In this article, we propose a scale-aware backprojectionTransformer termed SPT for RSISR. SPT incorporates the backprojection learn ing strategy into a Transformer framework. It consists of scale-aware backprojection-based self-attention layers (SPALs) for scale-aware low-resolutionfeature learningandscale-aware backprojection-basedTransformer blocks (SPTBs) for hierar chical feature learning. Abackprojection-based reconstruction module (PRM) is also introduced to enhance the hierarchical features for imagereconstruction.SPTstandsoutbyefficiently learning low-resolution featureswithout excessivemodules for high-resolution processing, resulting in lower computational resources.ExperimentalresultsonUCMercedandAIDdatasets demonstrate thatSPTobtains state-of-the-art resultscompared toother leadingRSISRmethods.
 
+### Dataset
+The format we use for the dataset is as follows:
+├── datasets
+    ├── AID-dataset
+    │   ├── trainsets
+    │       ├──HR
+    │       ├──LR_x2
+    │       ├──LR_x3
+    │       └──LR_x4
+    │   ├── valsets
+    │       ├──HR
+    │       ├──LR_x2
+    │       ├──LR_x3
+    │       └──LR_x4
+    │   └── testsets
+    │       ├──HR
+    │       ├──LR_x2
+    │       ├──LR_x3
+    │       └──LR_x4
+    └── UCMerced
+        ├── train
+        │   ├──trainH
+        │   ├──trainLx2
+        │   ├──trainLx3
+        │   └──trainLx4
+        ├── test
+        │   ├──trainH
+        │   ├──trainLx2
+        │   ├──trainLx3
+        │   └──trainLx4
+        └── val
+            ├──valH
+            ├──valLx2
+            ├──valLx3
+            └──valLx4
+
 ### Validate the performance
 
 Download the pretrained weights to `pth` directory first. Then use the following commands to validate the performance:
