@@ -16,6 +16,7 @@ Related links:
 
 ### Introduction
 Backprojectionnetworkshaveachievedpromising super-resolutionperformancefornature imagesbutnotwellbe explored intheremote sensing image super-resolution(RSISR) field due to the high computation costs. In this article, we propose a scale-aware backprojectionTransformer termed SPT for RSISR. SPT incorporates the backprojection learn ing strategy into a Transformer framework. It consists of scale-aware backprojection-based self-attention layers (SPALs) for scale-aware low-resolutionfeature learningandscale-aware backprojection-basedTransformer blocks (SPTBs) for hierar chical feature learning. Abackprojection-based reconstruction module (PRM) is also introduced to enhance the hierarchical features for imagereconstruction.SPTstandsoutbyefficiently learning low-resolution featureswithout excessivemodules for high-resolution processing, resulting in lower computational resources.ExperimentalresultsonUCMercedandAIDdatasets demonstrate thatSPTobtains state-of-the-art resultscompared toother leadingRSISRmethods.
+![SPT](SPT.png)
 
 ### Dataset
 The format we use for the dataset is as follows:
