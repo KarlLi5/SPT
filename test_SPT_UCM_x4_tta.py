@@ -35,7 +35,7 @@ def main():
 
     parser.add_argument('--task', type=str, default='classical_sr')
 
-    parser.add_argument('--scale', type=int, default=4, help='scale factor: 1, 2, 3, 4, 8')  # 1 for dn and jpeg car
+    parser.add_argument('--scale', type=int, default=4, help='scale factor: 2, 3, 4')  # 1 for dn and jpeg car
 
     parser.add_argument('--training_patch_size', type=int, default=64, help='patch size used in training SwinIR. '
                                                                             'Just used to differentiate two different '
@@ -43,11 +43,11 @@ def main():
                                                                             'Images are NOT tested patch by patch.')
 
     parser.add_argument('--model_path', type=str,
-                        default='/disk1/lwk/workspace/lwk_TGRS/weights/118236_E_500.pth')  # 测试权重地址
+                        default='pth/SPT_UCM_x4.pth')
 
-    parser.add_argument('--folder_lq', type=str, default='datasets/UCMerced/testsets/UCMerced/testLx4',
+    parser.add_argument('--folder_lq', type=str, default='datasets/UCMerced/testsets/testLx4',
                         help='input low-quality test image folder')
-    parser.add_argument('--folder_gt', type=str, default='datasets/UCMerced/testsets/UCMerced/testH',
+    parser.add_argument('--folder_gt', type=str, default='datasets/UCMerced/testsets/testH',
                         help='input ground-truth test image folder')
 
     args = parser.parse_args()
