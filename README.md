@@ -8,17 +8,17 @@ This is the official repository for Scale-aware Backprojection Transformer (SPT)
 Related links:
 [[Official PDF Download]](https://ieeexplore.ieee.org/abstract/document/10753509)
 
-### Requirements:
+## Requirements:
 
 * torch>=1.12.1
 * torchvision>=0.13.1
 * timm>=0.9.2
 
-### Introduction
+## Introduction
 Backprojectionnetworkshaveachievedpromising super-resolutionperformancefornature imagesbutnotwellbe explored intheremote sensing image super-resolution(RSISR) field due to the high computation costs. In this article, we propose a scale-aware backprojectionTransformer termed SPT for RSISR. SPT incorporates the backprojection learn ing strategy into a Transformer framework. It consists of scale-aware backprojection-based self-attention layers (SPALs) for scale-aware low-resolutionfeature learningandscale-aware backprojection-basedTransformer blocks (SPTBs) for hierar chical feature learning. Abackprojection-based reconstruction module (PRM) is also introduced to enhance the hierarchical features for imagereconstruction.SPTstandsoutbyefficiently learning low-resolution featureswithout excessivemodules for high-resolution processing, resulting in lower computational resources.ExperimentalresultsonUCMercedandAIDdatasets demonstrate thatSPTobtains state-of-the-art resultscompared toother leadingRSISRmethods.
 ![SPT](SPT.png)
 
-### Dataset
+## Dataset
 The format we use for the dataset is as follows:
 ```
 ├── datasets
@@ -56,7 +56,7 @@ The format we use for the dataset is as follows:
             └──valLx4
 ```
 
-### Validate the performance
+## Validate the performance
 
 
 Download the pretrained weights to `pth` directory first. Then use the following commands to validate the performance:
@@ -69,7 +69,7 @@ python test_SPT_UCM_x4_tta.py --scale 4 --model_path pth/UCMerced_x4_SPT.pth --f
 # --folder_gt ${YOUR_HR_PATH}: Replace ${YOUR_HR_PATH} with the path to your high-resolution (HR) ground truth data directory.
 ````
 
-### Citation
+## Citation
 
 If you are using the code/model/data provided here in a publication, please consider citing our works:
 
@@ -83,7 +83,7 @@ If you are using the code/model/data provided here in a publication, please cons
 }
 ````
 
-### Other Notes
+## Other Notes
 
 If you meet any problems, please do not hesitate to contact us.
 Issues and discussions are welcome in the repository!
