@@ -2,7 +2,7 @@
 
 This is the official repository for Scale-aware Backprojection Transformer (SPT). This repository contains:
 
-* [x] Full code for training/test.
+* [x] Full code for test.
 * [x] Pretrained models for x4 single remote sensing image super-resolution on the UCMerced dataset.
 
 Related links:
